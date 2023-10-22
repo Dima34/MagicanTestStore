@@ -40,6 +40,18 @@
             "label": "Right"
           },
           "label": "Text alignment"
+        },
+        "wishlist_button_settings":{
+          "content" : "Whislist button settings"
+        },
+        "padding_vertical":{
+          "content" : "Horizontal padding"
+        },
+        "padding_horizontal":{
+          "content" : "Veratical padding"
+        },
+        "wishlist_button_alignment":{
+          "content" : "Alignment"
         }
       }
     },
@@ -1908,6 +1920,9 @@
         },
         "title": {
           "name": "Title"
+        },
+        "metafields": {
+          "name": "Metafields"
         },
         "price": {
           "name": "Price"

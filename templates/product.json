@@ -50,6 +50,9 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "metafields" : {
+          "type" : "metafields"
         }
       },
       "block_order": [
@@ -60,7 +63,8 @@
         "price",
         "buy_buttons",
         "description",
-        "share"
+        "share",
+        "metafields"
       ],
       "settings": {
         "enable_sticky_info": true,

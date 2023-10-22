@@ -578,6 +578,48 @@
       },
       {
         "type": "header",
+        "content": "t:settings_schema.global.settings.wishlist_button_settings.content"
+      },
+      {
+        "type": "range",
+        "id": "card_favorite_padding_horizontal",
+        "min": 0,
+        "max": 100,
+        "unit": "px",
+        "label": "t:settings_schema.global.settings.padding_horizontal.content",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "card_favorite_padding_vertical",
+        "min": 0,
+        "max": 100,
+        "unit": "px",
+        "label": "t:settings_schema.global.settings.padding_vertical.content",
+        "default": 0
+      },
+      {
+        "type": "select",
+        "id": "card_favorite_alignment",
+        "options": [
+          {
+            "value": "left",
+            "label": "t:settings_schema.global.settings.text_alignment.options__1.label"
+          },
+          {
+            "value": "center",
+            "label": "t:settings_schema.global.settings.text_alignment.options__2.label"
+          },
+          {
+            "value": "right",
+            "label": "t:settings_schema.global.settings.text_alignment.options__3.label"
+          }
+        ],
+        "default": "left",
+        "label": "t:settings_schema.global.settings.wishlist_button_alignment.content"
+      },
+      {
+        "type": "header",
         "content": "t:settings_schema.global.settings.header__shadow.content"
       },
       {
