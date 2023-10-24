@@ -81,16 +81,16 @@
                             </p>
                         {%- when 'metafields' -%}
                             <p>
-                                {% if product.metafields.test_data.binding_mount %}
-                                    <strong>Binding
-                                        mount</strong> : {{ product.metafields.test_data.binding_mount }}
-                                {% endif %}
-                                {% if product.metafields.test_data.binding_mount and product.metafields.test_data.snowboard_length %}
+                            {%- for metafield in product.metafields.test_data -%}
+                                {% assign metafield_name = metafield[0] %}
+                                {% assign metafield_object = metafield[1] %}
+                                    <strong>{{ 'products.product.metafields.' | append: metafield_name | t }}</strong>
+                                    : {{ metafield_object.value }}
+
+                                {% if metafield != product.metafields.test_data.last %}
                                     <br>
                                 {% endif %}
-                                {% if product.metafields.test_data.snowboard_length %}
-                                    <strong>Length</strong> : {{ product.metafields.test_data.snowboard_length.value }}
-                                {% endif %}
+                            {%- endfor -%}
                             </p>
                         {%- when 'title' -%}
                             <div class="product__title" {{ block.shopify_attributes }}>
@@ -534,6 +534,9 @@
         
         
     
+        
+        
+        
         
         </script>
         <script src="{{ 'product-model.js' | asset_url }}" defer></script>
