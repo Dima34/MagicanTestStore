@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a31472a-7eb1-45da-9f79-aa3ddb06a463" name="Changes" comment="">
+    <list default="true" id="4a31472a-7eb1-45da-9f79-aa3ddb06a463" name="Changes" comment="Metafields render principle improved">
+      <change afterPath="$PROJECT_DIR$/sections/map.liquid" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/locales/en.default.json" beforeDir="false" afterPath="$PROJECT_DIR$/locales/en.default.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sections/main-product.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/sections/main-product.liquid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sections/contact-form.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/sections/contact-form.liquid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/page.contact.json" beforeDir="false" afterPath="$PROJECT_DIR$/templates/page.contact.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +34,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/macbookair/Documents/Work/Shopify/MagicanTestStore",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/macbookair/Documents/Work/Shopify/MagicanTestStore/sections",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -43,6 +45,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/sections" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -61,11 +68,24 @@
       <workItem from="1698000059166" duration="87000" />
       <workItem from="1698000161425" duration="495000" />
       <workItem from="1698000667819" duration="33000" />
-      <workItem from="1698055684357" duration="13971000" />
+      <workItem from="1698055684357" duration="16736000" />
     </task>
+    <task id="LOCAL-00001" summary="Metafields render principle improved">
+      <option name="closed" value="true" />
+      <created>1698136701794</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1698136701794</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Metafields render principle improved" />
+    <option name="LAST_COMMIT_MESSAGE" value="Metafields render principle improved" />
   </component>
 </project>

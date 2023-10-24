@@ -639,6 +639,12 @@
         "name": "Contact form"
       }
     },
+    "map": {
+      "name": "Map",
+      "presets": {
+        "name": "Map"
+      }
+    },
     "custom-liquid": {
       "name": "Custom Liquid",
       "settings": {

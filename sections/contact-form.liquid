@@ -23,7 +23,6 @@
     {%- else -%}
       <h2 class="visually-hidden">{{ 'templates.contact.form.title' | t }}</h2>
     {%- endif -%}
-    <h2>Write us</h2>
     {%- form 'contact', id: 'ContactForm', class: 'isolate' -%}
       {%- if form.posted_successfully? -%}
         <h2 class="form-status form-status-list form__message" tabindex="-1" autofocus>
@@ -125,9 +124,7 @@
         </button>
       </div>
     {%- endform -%}
-    <h2>Where we are</h2>
-    <iframe class="contact-page_map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20323.365688515936!2d30.51602695629883!3d50.45188996237099!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce5953c4b2b3%3A0xcea758cac1194a87!2sHoney!5e0!3m2!1sru!2sua!4v1697999350949!5m2!1sru!2sua" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </div>
+    </div>
 </div>
 
 {% schema %}
