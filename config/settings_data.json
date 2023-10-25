@@ -48,6 +48,8 @@
     "card_border_thickness": 0,
     "card_border_opacity": 10,
     "card_corner_radius": 4,
+    "card_favorite_padding_horizontal": 15,
+    "card_favorite_padding_vertical": 15,
     "card_shadow_opacity": 0,
     "card_shadow_horizontal_offset": 0,
     "card_shadow_vertical_offset": 0,
@@ -140,6 +142,9 @@
         }
       }
     },
+    "content_for_index": [
+
+    ],
     "blocks": {
       "7870687481494312845": {
         "type": "shopify:\/\/apps\/wishlist-hero\/blocks\/app-embed\/a9a5079b-59e8-47cb-b659-ecf1c60b9b72",
