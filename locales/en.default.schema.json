@@ -52,6 +52,12 @@
         },
         "wishlist_button_alignment":{
           "content" : "Alignment"
+        },
+        "new_arrivals_tag_name":{
+          "label" : "New arrivals tag"
+        },
+        "new_arrivals_tag_color":{
+          "label" : "New arrivals tag color"
         }
       }
     },
@@ -117,6 +123,9 @@
         },
         "sale_badge_color_scheme": {
           "label": "Sale badge color scheme"
+        },
+        "new_arrivals_badge_color_scheme": {
+          "label": "New arrivals badge color scheme"
         },
         "sold_out_badge_color_scheme": {
           "label": "Sold out badge color scheme"
