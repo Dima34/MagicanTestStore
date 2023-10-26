@@ -625,7 +625,8 @@
       {
         "type" : "text",
         "id" : "card_new_arrivals_tag_name",
-        "label" : "t:settings_schema.global.settings.new_arrivals_tag_name.label"
+        "label" : "t:settings_schema.global.settings.new_arrivals_tag_name.label",
+        "default" : "New arrivals"
       },
       {
         "type": "select",
