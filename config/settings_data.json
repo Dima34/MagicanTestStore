@@ -50,6 +50,10 @@
     "card_corner_radius": 4,
     "card_favorite_padding_horizontal": 15,
     "card_favorite_padding_vertical": 15,
+    "badge_position": "bottom left",
+    "badge_corner_radius": 40,
+    "sale_badge_color_scheme": "accent-2",
+    "sold_out_badge_color_scheme": "inverse",
     "card_shadow_opacity": 0,
     "card_shadow_horizontal_offset": 0,
     "card_shadow_vertical_offset": 0,
@@ -103,10 +107,6 @@
     "drawer_shadow_horizontal_offset": 0,
     "drawer_shadow_vertical_offset": 4,
     "drawer_shadow_blur": 5,
-    "badge_position": "bottom left",
-    "badge_corner_radius": 40,
-    "sale_badge_color_scheme": "accent-2",
-    "sold_out_badge_color_scheme": "inverse",
     "accent_icons": "text",
     "brand_headline": "© 2023 \/ Shopify, Inc.",
     "brand_description": "<p>©2023\/ Shopify, Inc.<\/p>",
@@ -152,12 +152,6 @@
         "settings": {
           "additionalWLButtonCssClasses": "",
           "additionalWLCartBubbleCssClasses": ""
-        }
-      },
-      "1698577192443": {
-        "type": "shopify:\/\/apps\/revito-amz-ali-review-importer\/blocks\/revito_core\/15b5d8de-8417-4f73-b0e7-67df54fc4f0b",
-        "disabled": false,
-        "settings": {
         }
       }
     }

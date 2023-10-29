@@ -55,16 +55,10 @@
           "type": "metafields",
           "settings": {
           }
-        },
-        "revito_stars": {
-          "type": "shopify:\/\/apps\/revito-amz-ali-review-importer\/blocks\/stars\/15b5d8de-8417-4f73-b0e7-67df54fc4f0b",
-          "settings": {
-          }
         }
       },
       "block_order": [
         "title",
-        "revito_stars",
         "vendor",
         "variant_picker",
         "quantity_selector",
@@ -106,6 +100,26 @@
         "padding_bottom": 28
       }
     },
+    "16985775245869a2d7": {
+      "type": "apps",
+      "blocks": {
+        "f1d4b41e-03ec-467d-b9dd-cc4e6d9af4c0": {
+          "type": "shopify:\/\/apps\/reputon-etsy-reviews\/blocks\/list-widget-block\/8df530b9-db50-44f9-a43b-c93c6bac56a9",
+          "settings": {
+            "themeId": "light",
+            "showProductPicture": true,
+            "showDate": true,
+            "showAvatar": true
+          }
+        }
+      },
+      "block_order": [
+        "f1d4b41e-03ec-467d-b9dd-cc4e6d9af4c0"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "editorify_section_widget": {
       "type": "editorify_section_widget",
       "settings": {
@@ -113,16 +127,6 @@
     },
     "revito_review_section": {
       "type": "apps",
-      "blocks": {
-        "revito_review_block": {
-          "type": "shopify:\/\/apps\/revito-amz-ali-review-importer\/blocks\/app-block\/15b5d8de-8417-4f73-b0e7-67df54fc4f0b",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "revito_review_block"
-      ],
       "settings": {
         "include_margins": true
       }
@@ -131,6 +135,7 @@
   "order": [
     "main",
     "related-products",
+    "16985775245869a2d7",
     "editorify_section_widget",
     "revito_review_section"
   ]
