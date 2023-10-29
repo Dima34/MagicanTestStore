@@ -1,0 +1,102 @@
+
+{%- liquid
+  assign starColor = "#ffd700"
+  assign starBGColor = "#c5c5c5"
+  assign badgeTextColor = "#000000"
+  assign textColor = "unset"
+  assign shadowColor = "#a2a2a2"
+
+  assign colors = shop.metafields.revito_design.revito_design.value
+  if colors != blank
+    if colors.starColor != blank
+      assign starColor = colors.starColor
+    endif
+    if colors.starBGColor != blank
+      assign starBGColor = colors.starBGColor
+    endif
+    if colors.badgeTextColor != blank
+      assign badgeTextColor = colors.badgeTextColor
+    endif
+    if colors.textColor != blank
+      assign textColor = colors.textColor
+    endif
+    if colors.shadowColor != blank
+      assign shadowColor = colors.shadowColor
+    endif
+
+  endif
+
+  assign revitoStars = 0
+  assign revitoReviews = 0
+  assign revitoStarsY = 0
+  assign stars = product.metafields.revito_reviews.stars.value
+
+  if stars != blank
+    assign revitoReviews = revitoReviews | plus: stars._1
+    assign revitoStars = revitoStars | plus: stars._1
+
+    assign revitoReviews = revitoReviews | plus: stars._2
+    assign Carpma = stars._2 | times: 2
+    assign revitoStars = revitoStars | plus: Carpma
+
+    assign revitoReviews = revitoReviews | plus: stars._3
+    assign Carpma = stars._3 | times: 3
+    assign revitoStars = revitoStars | plus: Carpma
+
+    assign revitoReviews = revitoReviews | plus: stars._4
+    assign Carpma = stars._4 | times: 4
+    assign revitoStars = revitoStars | plus: Carpma
+
+    assign revitoReviews = revitoReviews | plus: stars._5
+    assign Carpma = stars._5 | times: 5
+    assign revitoStars = revitoStars | plus: Carpma
+  endif
+
+
+
+  if revitoReviews != 0
+    assign revitoStars= revitoStars | plus: 0.0
+    assign revitoStars = revitoStars | divided_by: revitoReviews
+    assign revitoStars = revitoStars | round: 2
+    assign revitoStarsY = revitoStars | divided_by:5
+    assign revitoStarsY = revitoStarsY | times: 100
+
+    assign revitoStarsY = revitoStarsY | round: 2
+
+  endif
+
+  if request.design_mode
+    assign revitoStars = 4.0
+    assign revitoReviews = 30
+    assign revitoStarsY = 80
+
+  endif
+
+  assign revitoStarsBadge = revitoStars | round: 1
+
+  assign product_url=product.url
+  if request.path == product.url
+    assign product_url=""
+  endif
+
+-%}
+
+
+
+{%- if revitoReviews > 0 -%}
+<div style="display: none" class="revito_visibility">
+    <a style="text-decoration: none;color: inherit;" title="{{ revitoStars }}" href="{{ product_url }}#revito_iframe">
+<span style="display:inline-block">
+
+    <div class="revito_stars_bg" style="color: {{ starBGColor }}; text-shadow: 1px 1px 1px {{ shadowColor }};unicode-bidi: bidi-override;font-size: 17px;position: relative;">
+      <div class="revito_stars_fg" style="--stars:{{revitoStarsY}}%; color: {{ starColor }};text-shadow: 1px 1px 1px {{ shadowColor }}; position: absolute;z-index: 1;display: flex;left: 0;top:0;width: var(--stars);overflow: hidden;">★★★★★</div>
+    ★★★★★</div>
+
+</span>
+      <span  style="display:inline-block;font-weight: 600;font-size: 11px;white-space: nowrap;"> <span class="revito_stars_badge" style="background-color: {{ starColor }};padding: 6px;border-radius: 15px; box-shadow: 2px 2px 2px {{ shadowColor }};color: {{ badgeTextColor }};">{{ revitoStarsBadge }}</span> <span style="color:{{ textColor }}">({{ revitoReviews }})</span></span>
+    </a>
+
+</div>
+{%- endif -%}
+
+

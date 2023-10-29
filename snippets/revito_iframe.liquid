@@ -1,0 +1,214 @@
+
+<style>
+
+    .fullPage {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 999999;
+        display: none;
+        -webkit-box-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        align-items: center;
+        background-color: rgba(0,0,0,0.7);
+        cursor: cell;
+    }
+
+    .fullPageInDiv{
+        max-width: 750px;
+        height: 90%;
+
+        line-height: 0;
+    }
+
+    .fullPageInDiv img {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        max-width: 100%;
+        max-height: 100%;
+        cursor: pointer;
+    }
+</style>
+<div style="display:none; text-align: center" class="revito_visibility">
+    <iframe id="revito_iframe"  allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" frameborder="0" scrolling="no" style="width:100%; display: block; max-width: 1200px;margin: auto" data-src="https://online.revito.net/iframe?product_id={{ product.id }}&shop_id={{ shop.id }}&locale={{ shop.locale }}&design_mode={{ request.design_mode }}"></iframe>
+</div>
+<script>
+
+    let revito_img=document.createElement("img")
+    revito_img.setAttribute("class","fullImg")
+    let revito_inner_div=document.createElement("div")
+    revito_inner_div.setAttribute("class","fullPageInDiv")
+    let revito_main_div=document.createElement("div")
+    revito_main_div.setAttribute("class","fullPage")
+    revito_main_div.setAttribute("id","revitoImgFullPage")
+    revito_inner_div.append(revito_img)
+    revito_main_div.append(revito_inner_div)
+    document.body.append(revito_main_div)
+
+    let fullImages=[]
+    let fullImagesIndex=0
+
+    document.getElementById("revitoImgFullPage").addEventListener('click', e => {
+
+        if(e.target.className=="fullImg"){
+            fullImagesIndex=fullImagesIndex+1
+            if(fullImagesIndex>=fullImages.length)
+                fullImagesIndex=0
+
+            document.querySelector(".fullImg").setAttribute("src",fullImages[fullImagesIndex].replace("_SY88","_SY800"))
+
+        }else{
+            let el=document.querySelector(".fullPage")
+            el.style.display = 'none';
+        }
+
+    })
+
+
+
+
+    window.addEventListener('message', e => {
+
+        if(e.data.sender!="revito_iframe"){
+            return false;
+        }
+
+        if(e.data.option=="resize")
+            document.getElementById('revito_iframe').style.height = e.data.height+"px";
+
+        if(e.data.option=="images"){
+            fullImagesIndex=0;
+            fullImages=e.data.images;
+            let el=document.querySelector(".fullPage")
+            document.querySelector(".fullImg").setAttribute("src",fullImages[fullImagesIndex].replace("_SY88","_SY800"))
+            el.style.display = 'flex';
+        }
+    });
+
+
+
+
+    window.addEventListener('resize', e => {
+        document.getElementById('revito_iframe').contentWindow.postMessage({sender:"revito_extension",option:"send_me_height"}, "*");
+    },false);
+    window.addEventListener('load', e => {
+        document.getElementById('revito_iframe').contentWindow.postMessage({sender:"revito_extension",option:"send_me_height"}, "*");
+    },false);
+
+
+</script>
+
+{%- liquid
+    assign revitoStars = 0
+    assign revitoReviews = 0
+    assign revitoStarsY = 0
+    assign stars = product.metafields.revito_reviews.stars.value
+
+    if stars != blank
+        assign revitoReviews = revitoReviews | plus: stars._1
+        assign revitoStars = revitoStars | plus: stars._1
+
+        assign revitoReviews = revitoReviews | plus: stars._2
+        assign Carpma = stars._2 | times: 2
+        assign revitoStars = revitoStars | plus: Carpma
+
+        assign revitoReviews = revitoReviews | plus: stars._3
+        assign Carpma = stars._3 | times: 3
+        assign revitoStars = revitoStars | plus: Carpma
+
+        assign revitoReviews = revitoReviews | plus: stars._4
+        assign Carpma = stars._4 | times: 4
+        assign revitoStars = revitoStars | plus: Carpma
+
+        assign revitoReviews = revitoReviews | plus: stars._5
+        assign Carpma = stars._5 | times: 5
+        assign revitoStars = revitoStars | plus: Carpma
+    endif
+
+
+
+    if revitoReviews != 0
+        assign revitoStars= revitoStars | plus: 0.0
+        assign revitoStars = revitoStars | divided_by: revitoReviews
+        assign revitoStars = revitoStars | round: 2
+        assign revitoStarsY = revitoStars | divided_by:5
+        assign revitoStarsY = revitoStarsY | times: 100
+
+        assign revitoStarsY = revitoStarsY | round: 2
+
+    endif
+
+    if request.design_mode
+        assign revitoStars = 4.0
+        assign revitoReviews = 30
+        assign revitoStarsY = 80
+
+    endif
+
+    assign revitoStarsBadge = revitoStars | round: 1
+
+    if product.selected_or_first_available_variant.featured_media
+        assign seo_media = product.selected_or_first_available_variant.featured_media
+    else
+        assign seo_media = product.featured_media
+    endif
+
+-%}
+
+
+{%- if revitoReviews != 0 -%}
+<script type="application/ld+json">
+    {
+      "@context": "http://schema.org/",
+ "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "{{ revitoStarsBadge }}",
+    "bestRating": "5",
+    "ratingCount": "{{ revitoReviews }}"
+},
+      "@type": "Product",
+      "name": {{ product.title | json }},
+      "url": {{ request.origin | append: product.url | json }},
+      {% if seo_media -%}
+        "image": [
+          {{ seo_media | image_url: width: 1920 | prepend: "https:" | json }}
+        ],
+      {%- endif %}
+      "description": {{ product.description | strip_html | json }},
+      {% if product.selected_or_first_available_variant.sku != blank -%}
+        "sku": {{ product.selected_or_first_available_variant.sku | json }},
+      {%- endif %}
+      "brand": {
+        "@type": "Brand",
+        "name": {{ product.vendor | json }}
+      },
+      "offers": [
+        {%- for variant in product.variants -%}
+          {
+            "@type" : "Offer",
+            {%- if variant.sku != blank -%}
+              "sku": {{ variant.sku | json }},
+            {%- endif -%}
+{%- if variant.barcode.size == 12 -%}
+              "gtin12": {{ variant.barcode }},
+            {%- endif -%}
+{%- if variant.barcode.size == 13 -%}
+              "gtin13": {{ variant.barcode }},
+            {%- endif -%}
+{%- if variant.barcode.size == 14 -%}
+              "gtin14": {{ variant.barcode }},
+            {%- endif -%}
+            "availability" : "http://schema.org/{% if variant.available %}InStock{% else %}OutOfStock{% endif %}",
+            "price" : {{ variant.price | divided_by: 100.00 }},
+            "priceCurrency" : {{ cart.currency.iso_code | json }},
+            "url" : {{ request.origin | append: variant.url | json }}
+          }{% unless forloop.last %},{% endunless %}
+    {%- endfor -%}
+      ]
+    }
+  </script>
+{%- endif -%}

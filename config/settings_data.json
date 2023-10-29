@@ -153,6 +153,12 @@
           "additionalWLButtonCssClasses": "",
           "additionalWLCartBubbleCssClasses": ""
         }
+      },
+      "1698577192443": {
+        "type": "shopify:\/\/apps\/revito-amz-ali-review-importer\/blocks\/revito_core\/15b5d8de-8417-4f73-b0e7-67df54fc4f0b",
+        "disabled": false,
+        "settings": {
+        }
       }
     }
   },

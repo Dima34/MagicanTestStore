@@ -160,7 +160,7 @@ Renders a product card
                             {{ card_product.title | escape }}
                         </a>
                     </h3>
-                    <div class="card-information">
+                    <div class="card-information">{% render 'revito_stars', product: card_product, shop:shop %}
                         {%- if show_vendor -%}
                             <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
                             <div class="caption-with-letter-spacing light">{{ card_product.vendor }}</div>
