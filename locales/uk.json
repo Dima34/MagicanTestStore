@@ -53,14 +53,88 @@
         "page_title": "Перевірити",
         "continue_button_label": "Продовжити",
         "errors": {
-          "session_identifier_not_unique_error": "Щось пішло не так із вашим замовленням, будь ласка, спробуйте перевірити ще раз."
+          "session_identifier_not_unique_error": "Щось пішло не так із вашим замовленням, будь ласка, спробуйте перевірити ще раз.",
+          "payment": {
+            "shop_cash_gift_card_not_allowed": "Shop Cash не дозволяє купувати подарункові картки.",
+            "shop_cash_not_enabled": "Shop Cash не ввімкнено для цього магазину.",
+            "shop_cash_unsupported_subscriptions": "Shop Cash не підтримує підписки.",
+            "shop_cash_unsupported_shipping": "Shop Cash не підтримує товари без доставки.",
+            "invalid_address_type": "Наданий тип адреси недійсний для цього способу оплати.",
+            "missing_retail_attributions": "Роздрібні атрибуції потрібні для платежів кредитною карткою, введених вручну.",
+            "unexpected_retail_attributions": "Роздрібні атрибуції несподівано надано для оплати кредитною карткою.",
+            "invalid_card_source": "Цей сеанс не має дозволу на використання цього джерела карток.",
+            "wallet_content_missing": "Вміст гаманця відсутній.",
+            "payment_instrument_not_found": "Не вдалося знайти спосіб оплати",
+            "unauthorized_capture_method": "Налаштування методу збору платежів заборонено.",
+            "saved_payment_methods_not_allowed": "Збережені методи оплати заборонені.",
+            "saved_payment_methods_not_enabled": "Збережені способи оплати не активовані для цього магазину.",
+            "saved_payment_methods_cvv_verification_disabled": "Вибраний метод оплати вимагає перевірки CVV, яка не активована для цього магазину. Виберіть інший спосіб оплати.",
+            "store_credit_not_enabled": "Кредит магазину не активований для цього магазину.",
+            "store_credit_account_not_found": "Кредитний рахунок магазину не знайдено.",
+            "store_credit_account_mismatch": "Кредитний рахунок магазину не збігається з іменем покупця.",
+            "store_credit_mismatched_currency": "Валюта кредитного рахунку магазину не збігається з валютою оформлення замовлення.",
+            "store_credit_insufficient_funds": "На кредитному рахунку магазину недостатньо коштів.",
+            "store_credit_buying_gift_card": "Ви не можете використовувати кредит магазину, щоб купити подарункову картку.",
+            "gift_cards_not_allowed_for_b2b": "Подарункові картки заборонені в B2B-магазинах.",
+            "method_required": "Потрібно запропонувати спосіб оплати.",
+            "paypal_express_address_invalid": "PayPal повернув недійсну адресу.",
+            "shop_cash_unsupported_currency": "Shop Cash не підтримує цю валюту.",
+            "market_manager_blocks_wallet_payments": "Метод оплати не підтримується менеджером маркету."
+          },
+          "tip": {
+            "not_accepted_by_shop": "Магазин не приймає чайові.",
+            "only_one_tip_line_allowed": "Кілька рядків підказок не підтримуються.",
+            "tips_not_allowed_for_b2b": "Чайові заборонені в магазинах B2B.",
+            "currency_change_reset": "Підказку скинуто через зміну валюти.",
+            "tips_not_allowed_for_deferred_purchase_options": "Чайові ще не підтримуються для варіантів відкладеної покупки."
+          },
+          "sale_attribution": {
+            "draft_order_not_exist": "Цей проект замовлення не існує в поточному магазині.",
+            "staff_member_not_exist": "Цього персоналу немає в поточному магазині.",
+            "location_not_exist": "Це місце не існує в поточному магазині.",
+            "point_of_sale_device_not_exist": "Цей пристрій для точки продажу не існує в поточному магазині.",
+            "unresolvable_target_merchandise_lines": "Зважаючи на поточний контекст переговорів, запропоновані атрибуції продажу неможливо вирішити."
+          },
+          "non_negotiable": {
+            "missing_non_negotiable_terms": "Пропозиція вашого покупця має містити non-negotiable_terms.",
+            "invalid_signature": "Підпис для {{target_terms}} недійсний."
+          },
+          "inventory": {
+            "missing_quantity_value": "Поле кількості відсутнє в рядках запасів покупця.",
+            "changing_behavior_not_allowed": "Цей клієнт не має дозволу змінювати поведінку інвентарю.",
+            "only_one_inventory_behavior_allowed": "Наразі на касу дозволена лише одна поведінка інвентаризації."
+          },
+          "optional_duties": {
+            "optional_duties_not_permitted": "Відмова від мит ​​не дозволяється для цієї каси."
+          },
+          "attribution": {
+            "retail_attribution_not_allowed": "Для цієї каси заборонено роздрібне зазначення.",
+            "retail_attribution_required": "Для цієї каси потрібне зазначення роздрібної торгівлі."
+          },
+          "captcha": {
+            "metadata_missing": "Для цього замовлення потрібно ввести код перевірки.",
+            "metadata_mismatch": "Наданий постачальник і тип captcha не відповідають очікуваним значенням.",
+            "token_missing": "Щоб завершити цю перевірку, потрібно надати маркер captcha.",
+            "job_enqueue_failed": "Завдання перевірки captcha не вдалося поставити в чергу.",
+            "job_already_queued": "Перевірка Captcha вже поставлена ​​в чергу для цього маркера Captcha.",
+            "token_expired": "Термін дії наданого токена captcha минув. Введіть нову кодову перевірку, щоб продовжити оплату.",
+            "token_invalid": "Наданий маркер captcha недійсний. Введіть нову кодову перевірку, щоб продовжити оплату.",
+            "token_not_valid_for_session": "Наданий captcha не можна використовувати з цією перевіркою."
+          },
+          "fx_reconciliation_override": {
+            "shop_currency_mismatch": "Отримана сума має бути у валюті магазину."
+          }
         },
         "breadcrumb": "Хлібний сухарь",
         "autocomplete_title": "Пропозиції",
         "full_price": "Повна ціна:",
         "google_map_title": "Гугл карта",
         "processing": "Обробка…",
-        "remove_tag": "Видалити тег"
+        "remove_tag": "Видалити тег",
+        "confirm_order_button_label": "Підтвердити замовлення",
+        "sheet": {
+          "expand": "Розгорнути"
+        }
       },
       "contact": {
         "email_label": "Електронна пошта",
@@ -91,14 +165,23 @@
         "governorate_label": "Губернаторство",
         "governorate_placeholder": "Губернаторство",
         "postal_code_label": "Поштовий індекс",
-        "postal_code_placeholder": "Поштовий індекс"
+        "postal_code_placeholder": "Поштовий індекс",
+        "title": "Інформація",
+        "company_attention_label": "Компанія\/Увага",
+        "optional_company_attention_label": "Компанія\/Увага (необов'язково)"
       },
       "customer_account": {
         "sign_in_link_label": "авторизуватися",
         "not_user_label": "Не %{first_name}?",
         "invalid_address": "Вибрана адреса недійсна. %{update_address_link} або виберіть іншу адресу.",
         "incomplete_address": "Вибрана адреса неповна. %{update_address_link} або виберіть іншу адресу.",
-        "invalid_shipping_method_summary": "Виберіть дійсну адресу доставки, щоб переглянути доступні способи доставки"
+        "invalid_shipping_method_summary": "Виберіть дійсну адресу доставки, щоб переглянути доступні способи доставки",
+        "saved_address_option_description": {
+          "one": "У вас є {{count}} збережена адреса.",
+          "other": "У вас є {{count}} збережених адрес."
+        },
+        "saved_address_option_link": "Використовуйте збережену адресу",
+        "saved_address_modal_title": "Використовувати мою збережену адресу"
       },
       "stock": {
         "price_column_header": "Ціна",
@@ -134,6 +217,17 @@
         "continue_shopping_button_label": "Продовжити",
         "price_update": {
           "description": "Ціни на ці товари змінилися та оновлюються у вашому кошику."
+        },
+        "unfulfillable_product": {
+          "title": "Доставка недоступна",
+          "message": {
+            "one": "%{delivery_method} більше не доступний для цього товару.",
+            "other": "%{delivery_method} більше не доступний для цих товарів."
+          },
+          "default_message": {
+            "one": "Вибраний спосіб доставки більше не доступний для цього товару.",
+            "other": "Вибраний спосіб доставки більше не доступний для цих товарів."
+          }
         }
       },
       "order_summary": {
@@ -166,7 +260,43 @@
         "price_per_item": {
           "label": "%{price}\/шт"
         },
-        "sale_price": "Ціна продажу"
+        "sale_price": "Ціна продажу",
+        "discount_code_applied": "Код знижки застосовано",
+        "gift_card_applied": "Подарункова картка застосована",
+        "return_restocking_fee_label": "Плата за поповнення запасів",
+        "return_shipping_fee_label": "Зворотна доставка",
+        "shipping_default_value": "Розраховується на наступному кроці",
+        "shipping_discount_title": "Знижка на доставку",
+        "total_savings": "Повна економія",
+        "duties_included_label": "Усього враховуються податки та збори. Без додаткових оплат при доставці.",
+        "scroll_order_summary": "Перейдіть до інших елементів",
+        "expand_order_summary_short": "Показати",
+        "collapse_order_summary_short": "Сховати",
+        "expand_order_summary": "Показати підсумок замовлення",
+        "collapse_order_summary": "Приховати підсумок замовлення",
+        "original_price": "Оригінальна ціна",
+        "total_updated_label": "Оновлена ​​загальна ціна:",
+        "order_total_updated_label": "Оновлено всього",
+        "gift_card_ending": "Подарункова картка закінчується на %{last_characters}",
+        "estimated_tax_label": "Розрахунковий податок",
+        "multiple_shipping_lines_label": "Загальна сума доставки",
+        "recurring_subtotal_label": "Повторюваний проміжний підсумок",
+        "recurring_total_label": "Повторювана сума",
+        "recurring_total_tooltip": "Не включає доставку, податки, мита чи будь-які відповідні знижки.",
+        "confirmation_number_label": "Підтвердження #%{confirmation_number}",
+        "higher_value_discount_applied": "<strong style=\"text-transform:uppercase\">%{code}<\/strong> не можна використати з існуючими знижками.",
+        "percent_off_shipping": "%{percent}% знижка на доставку",
+        "amount_off_shipping": "%{amount} знижки на доставку",
+        "deferred_payment_info": {
+          "title": "Платіж %{amount_due} має бути сплачено %{due_at}",
+          "description_html": "Якщо у вас є запитання щодо вашого замовлення, %{contact_us}.",
+          "paid_today": "Всього сплачено сьогодні",
+          "due_on_fulfillment_title": "Оплата %{amount_due} має бути сплачена після виконання",
+          "due_on_receipt_title": "Оплата %{amount_due} має бути сплачена після отримання"
+        },
+        "deferred_balance_info": {
+          "title": "Залишок у розмірі {{amount_due}} сплачується {{due_at}}"
+        }
       },
       "shipping": {
         "delete": "Видалити",
@@ -608,7 +738,9 @@
       "delivery_options": {
         "pick_up_immediately": "Готовий до отримання",
         "pickup_point_method_definition": "Відправити до пункту отримання",
-        "none_method_definition": "Без доставки"
+        "none_method_definition": "Без доставки",
+        "ship_to_address": "Відправити за адресою",
+        "pick_up_from_store": "Забрати з магазину"
       },
       "contextual_availability": {
         "title": {
