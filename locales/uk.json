@@ -1,0 +1,255 @@
+{
+  "shopify": {
+    "sentence": {
+      "two_words_connector": " і ",
+      "last_word_connector": ", і "
+    },
+    "checkout": {
+      "general": {
+        "error_page_title": "Помилка",
+        "print_policies_link_label": "Роздрукувати",
+        "close_modal_label": "Закрити",
+        "close_notice_label": "Закрити",
+        "back_button_label": "Повернення",
+        "submit": "Надіслати",
+        "dates": {
+          "weekdays": {
+            "monday": "понеділок",
+            "friday": "П'ятниця",
+            "sunday": "неділя"
+          },
+          "months": {
+            "march": "березень",
+            "april": "квітень",
+            "august": "серпень"
+          }
+        }
+      },
+      "contact": {
+        "email_label": "Електронна пошта",
+        "email_placeholder": "Електронна пошта",
+        "county_label": "графство",
+        "county_placeholder": "графство",
+        "state_label": "Держава",
+        "state_placeholder": "Держава",
+        "region_label": "Регіон",
+        "region_placeholder": "Регіон",
+        "phone_label": "Телефон",
+        "phone_placeholder": "Телефон"
+      },
+      "customer_account": {
+        "sign_in_link_label": "авторизуватися"
+      },
+      "stock": {
+        "price_column_header": "Ціна",
+        "status_column_header": "Статус",
+        "remove": "видалити"
+      },
+      "order_summary": {
+        "apply_discount_button_label": "Застосувати",
+        "pickup_label": "Пікап",
+        "taxes_label": "податки",
+        "total_label": "Всього",
+        "partial_total_label": "Всього",
+        "price_label": "Ціна",
+        "product_change_label": "Зміна",
+        "duties_label": "Обов'язки"
+      },
+      "shipping": {
+        "delete": "Видалити"
+      },
+      "payment": {
+        "apply_gift_card_button_label": "Застосувати",
+        "ideal_label": "IDEAL",
+        "clear": "ясно",
+        "order_edit_banner_items_added": {
+          "one": "Додано"
+        },
+        "order_edit_banner_single_item_added": "Додано"
+      },
+      "post_purchase": {
+        "components": {
+          "close": "Закрити"
+        }
+      },
+      "order_payment_collection": {
+        "changes_summary": {
+          "added": {
+            "one": "Додано"
+          }
+        }
+      },
+      "subscriptions": {
+        "recurring_total_intervals": {
+          "month": {
+            "one": "місяць"
+          }
+        }
+      },
+      "throttle": {
+        "title": "Черга"
+      },
+      "notice_banner": {
+        "all_violations_email_link": "електронною поштою"
+      }
+    },
+    "attributes": {
+      "email": "електронною поштою"
+    },
+    "addresses": {
+      "state": "Держава"
+    },
+    "errors": {
+      "shop_404": {
+        "owner_ctas": {
+          "admin_link_text": "адмін"
+        }
+      }
+    },
+    "notices": {
+      "order": {
+        "transaction_status": {
+          "error": "Помилка"
+        },
+        "cancel_reason": {
+          "other": "Інший"
+        }
+      }
+    }
+  },
+  "customer_accounts": {
+    "orders": {
+      "order_list": {
+        "column_headers": {
+          "order": "порядок",
+          "items": "Предмети",
+          "total": "Всього"
+        },
+        "filter": {
+          "apply": "Застосувати",
+          "date": {
+            "today": "Сьогодні"
+          }
+        }
+      }
+    },
+    "order_details": {
+      "edit_summary": {
+        "added": "Додано"
+      },
+      "taxes": "податки",
+      "total": "Всього"
+    },
+    "B2B": {
+      "locations": {
+        "contact_email": "Електронна пошта",
+        "tax_exemptions_modal_close": "Закрити"
+      }
+    },
+    "errors": {
+      "load_extension_error": {
+        "title": "Помилка"
+      }
+    },
+    "payment_methods": {
+      "payment_details": {
+        "close_payment_modal": "Закрити"
+      }
+    },
+    "ui_components": {
+      "closeNotification": "Закрити",
+      "closeModal": "Закрити",
+      "march": "березень",
+      "april": "квітень",
+      "month": {
+        "one": "місяць"
+      }
+    }
+  },
+  "sections": {
+    "cart": {
+      "headings": {
+        "price": "Ціна",
+        "total": "Всього"
+      }
+    },
+    "slideshow": {
+      "slide": "слайд"
+    }
+  },
+  "general": {
+    "password_page": {
+      "login_form_submit": "Введіть"
+    }
+  },
+  "newsletter": {
+    "label": "Електронна пошта"
+  },
+  "accessibility": {
+    "close": "Закрити",
+    "error": "Помилка"
+  },
+  "blogs": {
+    "article": {
+      "email": "Електронна пошта"
+    }
+  },
+  "products": {
+    "facets": {
+      "apply": "Застосувати",
+      "clear": "ясно",
+      "reset": "Скинути"
+    }
+  },
+  "templates": {
+    "search": {
+      "pages": "сторінки"
+    },
+    "contact": {
+      "form": {
+        "email": "Електронна пошта"
+      }
+    }
+  },
+  "customer": {
+    "addresses": {
+      "phone": "Телефон"
+    },
+    "login_page": {
+      "email": "Електронна пошта",
+      "title": "Логін"
+    },
+    "order": {
+      "price": "Ціна",
+      "total": "Всього"
+    },
+    "orders": {
+      "order_number": "порядок",
+      "total": "Всього"
+    },
+    "register": {
+      "email": "Електронна пошта"
+    }
+  },
+  "recipient": {
+    "form": {
+      "email": "Електронна пошта",
+      "name": "Ім'я"
+    }
+  },
+  "pagefly": {
+    "products": {
+      "product": {
+        "on_sale": "Розпродаж"
+      }
+    },
+    "comments": {
+      "name": "Ім'я",
+      "email": "Електронна пошта"
+    },
+    "password_page": {
+      "login_form_submit": "Введіть",
+      "signup_form_email_label": "Електронна пошта"
+    }
+  }
+}
