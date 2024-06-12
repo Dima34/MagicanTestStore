@@ -205,10 +205,31 @@
         "settings": {
         }
       },
-      "15134163510845626300": {
-        "type": "shopify:\/\/apps\/geoip-country-redirect\/blocks\/speeedup_link\/a3fa1a12-9aad-4707-ab56-45ccf9191aa7",
+      "2813521209623697896": {
+        "type": "shopify:\/\/apps\/country-detector\/blocks\/redirection_popup\/7939fd25-72aa-44bd-88f4-ff57895e3ac4",
         "disabled": false,
         "settings": {
+          "show_customize_mode": false,
+          "font_family": "helvetica_n4",
+          "background_color": "#FFFFFF",
+          "title_text": "<p><strong>Do you want to visit our shop in [[COUNTRY_NAME]]?<\/strong><\/p>",
+          "title_text_color": "#000000",
+          "title_text_font_size": 20,
+          "description_text": "<p>We have detected, that you come to us from [[COUNTRY_NAME]]. Try to open our regional store. It should have more accurate information about delivery time and availability of goods.<\/p>",
+          "description_text_color": "#000000",
+          "description_text_font_size": 16,
+          "cancel_btn_text": "<p><strong>No, thanks.<\/strong><\/p>",
+          "cancel_btn_text_color": "#ABABAB",
+          "cancel_btn_text_font_size": 20,
+          "cancel_btn_width": 200,
+          "cancel_btn_background_color": "#FFFFFF",
+          "cancel_btn_border_color": "#ABABAB",
+          "open_btn_text": "<p><strong>Yes, redirect!<\/strong><\/p>",
+          "open_btn_text_color": "#FFFFFF",
+          "open_btn_text_font_size": 20,
+          "open_btn_width": 200,
+          "open_btn_background_color": "#0388FE",
+          "open_btn_border_color": "#0388FE"
         }
       }
     }
