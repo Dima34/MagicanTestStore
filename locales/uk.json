@@ -809,7 +809,29 @@
     "B2B": {
       "locations": {
         "contact_email": "Електронна пошта",
-        "tax_exemptions_modal_close": "Закрити"
+        "tax_exemptions_modal_close": "Закрити",
+        "contact_list_title": "Люди",
+        "contact_permissions": "Дозволи",
+        "location_picker_label": "Назва місця",
+        "location_picker_accessibility_label": "Назва місця: {{locationName}}",
+        "net_payment_terms_description": "{{name}} : платежі мають бути сплачені протягом {{numberOfDays}} днів",
+        "deposit_percentage": "{{percentage}} депозит",
+        "own_role_contact_name": "ви",
+        "pagination": {
+          "load_more_accessibility_label": "Завантажити більше місць"
+        },
+        "payment_details_title": "Платіжні реквізити",
+        "payment_terms": "Терміни оплати",
+        "permissions_label": "Ваші дозволи",
+        "permissions_title": "Дозволи",
+        "shipping_address_required": "Щоб розпочати розміщення замовлень, додайте адресу доставки до цього місця.",
+        "staff_and_permissions_title": "Персонал і дозволи",
+        "tax_details_title": "Податкові відомості",
+        "tax_id": "ІПН",
+        "tax_exemptions": "Звільнення від сплати податків",
+        "multiple_tax_exemptions": "ще {{taxExemptionsCount}}",
+        "multiple_tax_exemptions_and": "і",
+        "tax_exemptions_modal_button_accessibility_label": "Переглянути всі звільнення від сплати податків"
       },
       "orders": {
         "draft_order_list": {
@@ -825,7 +847,10 @@
               "other": "Ваш платіж прострочено на {{count}} днів"
             },
             "title_due_on_receipt": "Платіж ще не настав",
-            "description_authorized": "З вашого методу оплати буде стягнено плату в установлений термін, або ви можете оплатити зараз."
+            "description_authorized": "З вашого методу оплати буде стягнено плату в установлений термін, або ви можете оплатити зараз.",
+            "description_waiting_for_manual_payment": "Після отримання оплати замовлення буде позначено як оплачене.",
+            "description_due_on_receipt_partially_paid": "Це замовлення було частково оплачено. У вас є залишок. Коли настане термін оплати, ви отримаєте рахунок-фактуру.",
+            "description_due_on_fulfillment_partially_paid": "Це замовлення було частково оплачено. У вас є залишок. Оплата здійснюється після виконання всіх пунктів цього замовлення."
           },
           "refund": {
             "description_full_refund": "Ви отримали повне відшкодування за це замовлення."
@@ -851,19 +876,86 @@
         "payment_delete": {
           "description_without_replacement": "Цей спосіб оплати більше не буде доступний для майбутніх покупок у цьому місці."
         }
+      },
+      "account_information": {
+        "company_card_name_label": "Назва компанії"
+      },
+      "location_selection": {
+        "continue_to_store": "Продовжуйте зберігати",
+        "description": "Якщо у вашому кошику вже є товари, зміна місця розташування може вплинути на ціни та кількість кошика.",
+        "list_accessibility_label": "Список місць",
+        "list_item_without_address_accessibility_label": "{{name}} : немає адреси",
+        "list_loading_accessibility_message": "Завантаження списку місць",
+        "list_loading_address_accessibility_message": "Завантаження адреси для {{locationName}}",
+        "list_loading_finished_accessibility_message": "Список місць завантажено",
+        "loading_store_accessibility_message": "Збирається в магазин",
+        "no_location_title": "Тільки особисті замовлення",
+        "no_location_description": "Ви більше не маєте дозволу розміщувати замовлення для {{company}} . Ви ще можете робити індивідуальні замовлення.",
+        "no_locations_found": "Місця не знайдено"
       }
     },
     "errors": {
       "load_extension_error": {
-        "title": "Помилка"
+        "title": "Помилка",
+        "description": "Оновіть сторінку або повторіть спробу через кілька хвилин.",
+        "refresh_button": "Оновити сторінку"
       },
       "address_deletion_error": {
         "description": "Під час видалення цієї адреси виникла проблема. Повторіть спробу або оновіть сторінку."
-      }
+      },
+      "load_orders_error": {
+        "retry_button": "Повторіть спробу"
+      },
+      "load_paypal_error": {
+        "description": "Виникла проблема із завантаженням PayPal. Будь ласка спробуйте ще раз."
+      },
+      "logout_everywhere": {
+        "description": "Щось пішло не так під час виходу. Будь ласка спробуйте ще раз."
+      },
+      "no_access": {
+        "back_to_authentication_link": "Увійдіть в інший обліковий запис",
+        "description": "Ви не зареєстровані як клієнт B2B у {{shopName}}",
+        "title": "Немає доступу"
+      },
+      "no_access_to_locations": {
+        "description": "Ви не маєте доступу до жодного місця"
+      },
+      "not_found": {
+        "description": "Перевірте URL-адресу або повторіть спробу через кілька хвилин.",
+        "title": "Виникла проблема із завантаженням цієї сторінки"
+      },
+      "order_not_found": {
+        "description": "Це замовлення не існує або у вас немає дозволу на його перегляд.",
+        "title": "Замовлення не знайдено"
+      },
+      "profile_update_error": {
+        "description": "Під час оновлення вашого профілю виникла проблема. Спробуйте оновити цю сторінку або перевірте підключення до Інтернету."
+      },
+      "retry_action_label": "Повторіть спробу"
     },
     "payment_methods": {
       "payment_details": {
-        "close_payment_modal": "Закрити"
+        "close_payment_modal": "Закрити",
+        "title": "Деталі способу оплати",
+        "credit_card_details_accessibility_label": "закінчується на {{lastDigits}}",
+        "card_info_title": "Інформація про картку",
+        "payment_method_expiring_on": "Термін дії закінчується {{expiryDate}}",
+        "payment_method_expired_on": "Термін дії минув {{expiryDate}}",
+        "preauthorized_payments": "Попередньо авторизовані платежі",
+        "close_payment_modal_accessibility_label": "Закрити деталі способу оплати",
+        "payment_method_not_found_error": "Не вдалося знайти спосіб оплати",
+        "payment_details_loading": "Завантаження інформації про спосіб оплати",
+        "pre_authorized_payments": "Попередньо авторизовані платежі",
+        "total_amount_of_subscription_line_items_left": "і ще {{total}}",
+        "total_amount_of_subscription_line_items_left_accessibility_label": "Загальна кількість елементів {{totalItems}} , відображається кількість елементів {{totalItemsToDisplay}} .",
+        "next_payment_due": "Термін наступного платежу {{dueDateInMonthDayYear}}",
+        "edit_payment_method_button_accessibility_label": "Змінити спосіб оплати, який закінчується на {{lastDigits}}",
+        "loading_shop_pay": "Завантаження Shop Pay",
+        "invalid_payment_method": "Недійсний спосіб оплати",
+        "invalid_payment_method_message": "Використовуйте нову кредитну картку, щоб продовжувати отримувати наступні замовлення.",
+        "replace_payment_method": "Замінити спосіб оплати",
+        "checkout_card_banner": "Цей спосіб оплати можна використовувати лише для попередньо авторизованих платежів. Він не з’явиться під час оплати, якщо ви ввійшли в цей магазин.",
+        "default_checkbox_accessibility_label": "Встановити цей спосіб оплати за умовчанням"
       },
       "card_fields": {
         "field_errors": {
@@ -887,7 +979,8 @@
         "billing_address_add_new": "Додати новий",
         "billing_address_choose_from_list": "Виберіть зі списку",
         "future_purchases_notice": "Цей спосіб оплати буде збережено для майбутніх покупок.",
-        "generic_error": "Під час оновлення виникла проблема. Будь ласка спробуйте ще раз."
+        "generic_error": "Під час оновлення виникла проблема. Будь ласка спробуйте ще раз.",
+        "title": "Редагувати спосіб оплати"
       },
       "payment_delete": {
         "title": "Видалити спосіб оплати",
@@ -922,6 +1015,36 @@
           "choose_billing_address_from_list_button_accessibility_label": "Виберіть платіжну адресу зі списку",
           "missing_billing_address_error_message": "Будь ласка, вкажіть платіжну адресу",
           "default_checkbox": "Встановити як спосіб оплати за умовчанням"
+        }
+      },
+      "add_payment_method_button": "Додати спосіб оплати",
+      "add_payment_method_banner": "Додайте спосіб оплати для швидшої оплати або попередньо авторизованих послуг",
+      "no_payment_methods_banner": "Немає доданих способів оплати",
+      "edit_payment_method_button_accessibility_label": "Змінити {{paymentMethodName}} що закінчується на {{lastDigits}}",
+      "edit_payment_method_brand_button_accessibility_label": "Редагувати {{paymentMethodName}}",
+      "delete_payment_method_button_accessibility_label": "Видалити {{paymentMethodName}}",
+      "back_button": "Назад",
+      "back_button_accessibility_label": "Назад до {{paymentMethodStepTitle}}",
+      "generic_card": "картка",
+      "expiration_warning_button_accessibility_label": "Показати попередження про закінчення терміну дії для {{paymentMethodName}} що закінчується на {{lastDigits}}",
+      "expires_soon": "Термін дії цієї картки скоро закінчується",
+      "expired": "Термін дії цієї картки закінчився",
+      "card_update_consent": "Цей спосіб оплати буде збережено для майбутніх покупок.",
+      "digital_wallet_title": "Цифровий гаманець",
+      "credit_or_debit_card_title": "Кредитна або дебетова картка",
+      "google_pay": {
+        "loading": "Завантаження Google Pay",
+        "errors": {
+          "generic": "Виникла проблема з Google Pay. Повторіть спробу або скористайтеся іншим способом оплати.",
+          "missing_billing_address": "Для Google Pay потрібна платіжна адреса. Будь ласка, додайте один до свого облікового запису."
+        }
+      },
+      "apple_pay": {
+        "loading": "Завантаження Apple Pay",
+        "errors": {
+          "generic": "Виникла проблема з Apple Pay. Повторіть спробу або скористайтеся іншим способом оплати.",
+          "not_available": "Apple Pay недоступна на цьому пристрої.",
+          "missing_billing_address": "Для Apple Pay потрібна платіжна адреса. Будь ласка, додайте один до свого облікового запису."
         }
       }
     },
@@ -1000,6 +1123,15 @@
         "button": "Вийти всюди",
         "warning_message": "Ви також вийдете з системи на цьому пристрої."
       }
+    },
+    "address_form": {
+      "default_address_update_success_notification": "Адресу за умовчанням оновлено",
+      "loading_add_form_accessibility_message": "Завантаження форми нової адреси",
+      "loading_edit_form_accessibility_message": "Завантаження форми редагування адреси",
+      "loading_form_accessibility_message": "Завантаження адресної форми",
+      "loading_finished_accessibility_message": "Форма адреси завантажена",
+      "save_accessibility_label": "Зберегти адресу {{address}}",
+      "update_success_notification": "Адреса оновлена"
     }
   },
   "sections": {
