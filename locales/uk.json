@@ -2864,17 +2864,23 @@
         "one": "{{ count }} коментар"
       },
       "success": "Ваш коментар успішно опубліковано! Дякую тобі!",
-      "title": "Залишити коментар"
+      "title": "Залишити коментар",
+      "message": "повідомлення",
+      "moderated": "Будь ласка, зверніть увагу, коментарі повинні бути затверджені перед публікацією"
     },
     "password_page": {
       "login_form_submit": "Введіть",
       "signup_form_email_label": "Електронна пошта",
-      "login_form_password_label": "Пароль"
+      "login_form_password_label": "Пароль",
+      "signup_form_success": "Ми надішлемо вам електронний лист безпосередньо перед відкриттям!"
     },
     "article": {
       "tags": "Теги:",
       "all_topics": "Всі теми",
-      "by_author": "від {{ author }}"
+      "by_author": "від {{ author }}",
+      "posted_in": "Опубліковано в",
+      "read_more": "Читати далі",
+      "back_to_blog": "Назад до {{ title }}"
     }
   },
   "gift_cards": {
